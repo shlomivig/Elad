@@ -10,7 +10,7 @@ CREATE TABLE Users
 	lName			nvarchar(128),
 	isMale			bit,
 	username		nvarchar(128),
-	password		varchar(32),
+	password varchar(128) NOT NULL,
 	phone			varchar(128),
 	countryCode		varchar(4),
 	city			nvarchar(128),
@@ -23,11 +23,11 @@ CREATE nonclustered INDEX idx_Users_phone ON Users (phone);
 
 insert into Users (fName, lName, isMale, username, password, phone, countryCode, city, address, zipcode)
 values 
-('John', 'Doe', 1, 'john.doe@example.com', 'password123', '0501234567', '+1', 'New York', '123 5th Ave', '10001'),
-('Jane', 'Smith', 0, 'jane.smith@example.com', 'password123', '0522345678', '+1', 'Los Angeles', '456 Sunset Blvd', '90001'),
-('David', 'Johnson', 1, 'david.johnson@example.com', 'password123', '0533456789', '+1', 'Chicago', '789 Lake Shore Dr', '60007'),
-('Emily', 'Davis', 0, 'emily.davis@example.com', 'password123', '0544567890', '+1', 'Miami', '101 Ocean Dr', '33101'),
-('Michael', 'Wilson', 1, 'michael.wilson@example.com', 'password123', '0555678901', '+1', 'Houston', '202 Main St', '77001');
+('John', 'Doe', 1, 'john.doe@example.com', '$2b$10$cU7GDZOZXLwf06iBlqCTQe9t6mgEFywBcpGBwY5Bu8tIhW4annHKu', '0501234567', '+1', 'New York', '123 5th Ave', '10001'),
+('Jane', 'Smith', 0, 'jane.smith@example.com', '$2b$10$cU7GDZOZXLwf06iBlqCTQe9t6mgEFywBcpGBwY5Bu8tIhW4annHKu', '0522345678', '+1', 'Los Angeles', '456 Sunset Blvd', '90001'),
+('David', 'Johnson', 1, 'david.johnson@example.com', '$2b$10$cU7GDZOZXLwf06iBlqCTQe9t6mgEFywBcpGBwY5Bu8tIhW4annHKu', '0533456789', '+1', 'Chicago', '789 Lake Shore Dr', '60007'),
+('Emily', 'Davis', 0, 'emily.davis@example.com', '$2b$10$cU7GDZOZXLwf06iBlqCTQe9t6mgEFywBcpGBwY5Bu8tIhW4annHKu', '0544567890', '+1', 'Miami', '101 Ocean Dr', '33101'),
+('Michael', 'Wilson', 1, 'michael.wilson@example.com', '$2b$10$cU7GDZOZXLwf06iBlqCTQe9t6mgEFywBcpGBwY5Bu8tIhW4annHKu', '0555678901', '+1', 'Houston', '202 Main St', '77001');
 go
 
 
