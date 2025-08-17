@@ -17,12 +17,4 @@ export class Cart {
   @Column({ type: 'int' })
   amount: number;
 
-  @Column({ type: 'bit' })
-  isActive: boolean;
-
-  @Column({ type: 'datetime' })
-  iTime: Date;
 }
-
-
-

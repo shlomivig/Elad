@@ -17,11 +17,4 @@ export class Products {
   @Column({ type: 'int' })
   price: number;
 
-  @Column({ type: 'bit' })
-  isActive: boolean;
-
-  @Column({ type: 'datetime' })
-  iTime: Date;
 }
-
-

@@ -35,9 +35,4 @@ export class User {
   @Column({ type: 'varchar', length: 16 })
   zipcode: string;
   
-  @Column({ type: 'bit' })
-  isActive: boolean;
-
-  @Column({ type: 'datetime' })
-  iTime: Date;
 }

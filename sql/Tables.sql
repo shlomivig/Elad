@@ -80,7 +80,7 @@ CREATE TABLE Products
 	name			nvarchar(128),
 	description		nvarchar(128),
 	categoryId		int,
-	price			bit,
+	price			int,
 	isActive		smallint default 1, 
 	iTime			datetime default getdate()
 )
